@@ -8,8 +8,8 @@ The Dockerfile is divided into a single main stage:
 
 1. **Build Stage**:
     - **Base Image**: Uses `python:3.12` as the base image.
-    - **Function Directory**: Creates a custom function directory at `/build/dependencies`.
-    - **Dependencies Installation**: Installs `poetry`, exports the dependencies to `requirements.txt`, and installs them into the function directory.
+    - **Function Directory**: Creates a custom function directory at `/build/`.
+    - **Dependencies Installation**: Installs `poetry` and installs the dependencies using `poetry install`.
     - **Copy Function Code**: Copies the source code to the build directory.
 
 ## How to Build and Run the Docker Container
